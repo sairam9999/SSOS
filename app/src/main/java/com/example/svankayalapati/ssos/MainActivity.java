@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -34,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getBaseContext(), "Grid Item " + (position + 1) + " Selected", Toast.LENGTH_LONG).show();
             }
         });
+
+       // EditText text1 = (EditText) findViewById(R.id.text1);
+        //text1.clearFocus();
 
     }
     public class ImageAdapterGridView extends BaseAdapter {
@@ -63,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
                 mImageView.setLayoutParams(new GridView.LayoutParams(130, 130));
                 mImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 mImageView.setPadding(16, 16, 16, 16);
+                mImageView.clearFocus();
+
             } else {
                 mImageView = (ImageView) convertView;
             }
