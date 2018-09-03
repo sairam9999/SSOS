@@ -20,19 +20,21 @@ android:weightSum="7"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="B1"/>
+        android:background="@drawable/grocery"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="B2"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:background="@drawable/stationary"
+        />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="B3"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:background="@drawable/electricals"
+        />
 
 </LinearLayout>
 
@@ -48,22 +50,23 @@ android:weightSum="7"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="B4"
-        android:background="@drawable/entertainment"/>
+        android:background="@drawable/medicines"
+        />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="B5"
         android:layout_weight="1"
-        android:background="@drawable/entertainment"/>
+        android:background="@drawable/services"
+        />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:elevation="0dp"
-        android:background="@drawable/stay"/>
+        android:background="@drawable/smarthome"
+        />
 
 </LinearLayout>
 

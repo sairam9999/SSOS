@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     Integer[] imageIDs = {
-            R.drawable.untitled, R.drawable.untitled, R.drawable.untitled,
-            R.drawable.untitled, R.drawable.untitled, R.drawable.untitled,
+            R.drawable.grocery, R.drawable.stationary, R.drawable.electricals,
+            R.drawable.medicines, R.drawable.services, R.drawable.smarthome,
     };
 
     @Override
