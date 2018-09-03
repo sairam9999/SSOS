@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -16,31 +15,34 @@ public class MainActivity extends AppCompatActivity {
 
     GridView androidGridView;
 
-    Integer[] imageIDs = {
-            R.drawable.controlyourhome, R.drawable.keepintouch, R.drawable.logoentertainment,
-            R.drawable.maps, R.drawable.memoriestoshare, R.drawable.todo,
 
+    Integer[] imageIDs = {
+            R.drawable.untitled, R.drawable.untitled, R.drawable.untitled,
+            R.drawable.untitled, R.drawable.untitled, R.drawable.untitled,
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        androidGridView = (GridView) findViewById(R.id.GridView1);
-        androidGridView.setAdapter(new ImageAdapterGridView(this));
+      //  androidGridView = (GridView) findViewById(R.id.GridView1);
+        //androidGridView.setAdapter(new ImageAdapterGridView(this));
 
-        androidGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent,
-                                    View v, int position, long id) {
-                Toast.makeText(getBaseContext(), "Grid Item " + (position + 1) + " Selected", Toast.LENGTH_LONG).show();
-            }
-        });
+//        androidGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            public void onItemClick(AdapterView<?> parent,
+//                                    View v, int position, long id) {
+//                Toast.makeText(getBaseContext(), "Grid Item " + (position + 1) + " Selected", Toast.LENGTH_LONG).show();
+//            }
+//        });
 
        // EditText text1 = (EditText) findViewById(R.id.text1);
         //text1.clearFocus();
 
+
     }
-    public class ImageAdapterGridView extends BaseAdapter {
+
+
+   /* public class ImageAdapterGridView extends BaseAdapter {
         private Context mContext;
 
         public ImageAdapterGridView(Context c) {
@@ -64,9 +66,9 @@ public class MainActivity extends AppCompatActivity {
 
             if (convertView == null) {
                 mImageView = new ImageView(mContext);
-                mImageView.setLayoutParams(new GridView.LayoutParams(130, 130));
+                mImageView.setLayoutParams(new GridView.LayoutParams(700, 515));
                 mImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                mImageView.setPadding(16, 16, 16, 16);
+                mImageView.setPadding(20, 20, 20, 20);
                 mImageView.clearFocus();
 
             } else {
@@ -75,5 +77,5 @@ public class MainActivity extends AppCompatActivity {
             mImageView.setImageResource(imageIDs[position]);
             return mImageView;
         }
-    }
+    }*/
 }
