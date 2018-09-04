@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout place_order_layout;
     Integer[] imageIDs = {
             R.drawable.grocery, R.drawable.stationary, R.drawable.electricals,
-            R.drawable.medicines, R.drawable.smarthome, R.drawable.smarthome,
+            R.drawable.medicines, R.drawable.home_services, R.drawable.smarthome,
     };
 
     @Override
