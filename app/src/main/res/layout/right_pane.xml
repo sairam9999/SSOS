@@ -4,6 +4,59 @@
 android:layout_width="0dp"
 android:layout_height="match_parent"
 android:layout_weight="2"
-android:orientation="horizontal">
+android:orientation="vertical">
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Place Order"
+    android:id="@+id/place_order"
+    android:drawableLeft="@drawable/icon_cart"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:id="@+id/place_order_layout"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Create New Order"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Use Smart Order"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Use Recent Order"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Use Saved Order"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="More Apps"
+        android:visibility="visible"
+        android:drawableLeft="@drawable/icon_moreapps"
+        />
+
+
 
 </LinearLayout>

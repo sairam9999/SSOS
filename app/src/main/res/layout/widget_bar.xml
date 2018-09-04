@@ -10,25 +10,37 @@ android:orientation="horizontal">
     android:id="@+id/buttonMsg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_weight="0.25" />
+    android:layout_weight="0.25"
+    android:drawableLeft="@drawable/ic_email"
+    android:text="Email"
+    />
 
 <Button
     android:id="@+id/buttonEmail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_weight="0.25" />
+    android:layout_weight="0.25"
+    android:drawableLeft="@drawable/ic_chat"
+    android:text="Messages"
+    />
 
 <Button
     android:id="@+id/buttonWeather"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_weight="0.25" />
+    android:layout_weight="0.25"
+    android:drawableLeft="@drawable/ic_weather"
+    android:text="Weather"
+    />
 
 <Button
     android:id="@+id/buttonMovie"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_weight="0.25" />
+    android:layout_weight="0.25"
+    android:drawableLeft="@drawable/ic_movie"
+    android:text="Video Calls"
+    />
 
 
 </LinearLayout>

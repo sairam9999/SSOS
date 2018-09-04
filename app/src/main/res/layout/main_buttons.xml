@@ -14,19 +14,33 @@ android:weightSum="7"
     android:layout_height="match_parent"
     android:layout_weight="3.5"
     android:weightSum="3"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    >
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@drawable/grocery"/>
+        android:background="@drawable/grocery"
+        android:text="Grocery"
+        android:gravity="center|bottom"
+        android:textSize="25sp"
+        android:textColor="#eebc0f0f"
+        android:layout_margin="5dp"
+        android:textStyle="bold|italic"
+        />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@drawable/stationary"
+        android:text="Stationary"
+        android:gravity="center|bottom"
+        android:textSize="25sp"
+        android:textColor="#eebc0f0f"
+        android:layout_margin="5dp"
+        android:textStyle="bold|italic"
         />
 
     <Button
@@ -34,6 +48,12 @@ android:weightSum="7"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@drawable/electricals"
+        android:text="Electricals"
+        android:gravity="center|bottom"
+        android:textSize="25sp"
+        android:textColor="#eebc0f0f"
+        android:layout_margin="5dp"
+        android:textStyle="bold|italic"
         />
 
 </LinearLayout>
@@ -44,13 +64,20 @@ android:weightSum="7"
     android:layout_height="match_parent"
     android:layout_weight="3.5"
     android:weightSum="3"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    >
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@drawable/medicines"
+        android:text="Medicines"
+        android:gravity="center|bottom"
+        android:textSize="25sp"
+        android:textColor="#eebc0f0f"
+        android:layout_margin="5dp"
+        android:textStyle="bold|italic"
         />
 
     <Button
@@ -58,6 +85,12 @@ android:weightSum="7"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@drawable/services"
+        android:text="Home Services"
+        android:gravity="center|bottom"
+        android:textSize="25sp"
+        android:textColor="#eebc0f0f"
+        android:layout_margin="5dp"
+        android:textStyle="bold|italic"
         />
 
     <Button
@@ -66,6 +99,12 @@ android:weightSum="7"
         android:layout_weight="1"
         android:elevation="0dp"
         android:background="@drawable/smarthome"
+        android:text="Smart Home"
+        android:gravity="center|bottom"
+        android:textSize="25sp"
+        android:textColor="#eebc0f0f"
+        android:layout_margin="5dp"
+        android:textStyle="bold|italic"
         />
 
 </LinearLayout>
