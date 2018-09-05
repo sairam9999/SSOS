@@ -12,13 +12,16 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     GridView androidGridView;
     Button place_order;
-    LinearLayout place_order_layout;
+    LinearLayout place_order_linearlayout;
+    RelativeLayout placeorder_relativeLayout;
+    Button more_apps_button;
     Integer[] imageIDs = {
             R.drawable.grocery, R.drawable.stationary, R.drawable.electricals,
             R.drawable.medicines, R.drawable.home_services, R.drawable.smarthome,
@@ -30,66 +33,34 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         place_order = (Button) findViewById(R.id.place_order);
-        place_order_layout = (LinearLayout) findViewById(R.id.place_order_layout);
+        place_order_linearlayout = (LinearLayout) findViewById(R.id.place_order_linearlayout);
+        placeorder_relativeLayout = (RelativeLayout) findViewById(R.id.place_order_relativelayout);
+        more_apps_button = (Button) findViewById(R.id.more_apps_button);
 
         place_order.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
-                place_order_layout.setVisibility(View.VISIBLE);
+                place_order_linearlayout.setVisibility(View.VISIBLE);
+
+                RelativeLayout.LayoutParams params0 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+                RelativeLayout.LayoutParams params1 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT);
+                params1.addRule(RelativeLayout.BELOW, R.id.place_order);
+
+                RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT);
+                params2.addRule(RelativeLayout.BELOW, R.id.place_order_linearlayout);
+
+                placeorder_relativeLayout.addView(place_order, params0);
+                placeorder_relativeLayout.addView(place_order_linearlayout, params1);
+                placeorder_relativeLayout.addView(more_apps_button, params2);
+
+
+
+
             }
         });
-
-      //  androidGridView = (GridView) findViewById(R.id.GridView1);
-        //androidGridView.setAdapter(new ImageAdapterGridView(this));
-
-//        androidGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            public void onItemClick(AdapterView<?> parent,
-//                                    View v, int position, long id) {
-//                Toast.makeText(getBaseContext(), "Grid Item " + (position + 1) + " Selected", Toast.LENGTH_LONG).show();
-//            }
-//        });
-
-       // EditText text1 = (EditText) findViewById(R.id.text1);
-        //text1.clearFocus();
-
-
     }
-
-
-   /* public class ImageAdapterGridView extends BaseAdapter {
-        private Context mContext;
-
-        public ImageAdapterGridView(Context c) {
-            mContext = c;
-        }
-
-        public int getCount() {
-            return imageIDs.length;
-        }
-
-        public Object getItem(int position) {
-            return null;
-        }
-
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ImageView mImageView;
-
-            if (convertView == null) {
-                mImageView = new ImageView(mContext);
-                mImageView.setLayoutParams(new GridView.LayoutParams(700, 515));
-                mImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                mImageView.setPadding(20, 20, 20, 20);
-                mImageView.clearFocus();
-
-            } else {
-                mImageView = (ImageView) convertView;
-            }
-            mImageView.setImageResource(imageIDs[position]);
-            return mImageView;
-        }
-    }*/
 }
