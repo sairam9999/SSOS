@@ -1,112 +1,102 @@
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-android:layout_width="0dp"
-android:layout_height="match_parent"
-android:layout_weight="6"
-android:orientation="vertical"
-android:weightSum="7"
-    >
-
-
-<LinearLayout
-    android:layout_width="match_parent"
+    android:layout_width="0dp"
     android:layout_height="match_parent"
-    android:layout_weight="3.5"
-    android:weightSum="3"
-    android:orientation="horizontal"
-    >
+    android:layout_weight="6"
+    android:orientation="vertical"
+    android:weightSum="7">
 
-    <Button
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@drawable/grocery"
-        android:text="Grocery"
-        android:gravity="center|bottom"
-        android:textSize="25sp"
-        android:textColor="#eebc0f0f"
-        android:layout_margin="5dp"
-        android:textStyle="bold|italic"
-        />
+        android:layout_weight="3.5"
+        android:orientation="horizontal"
+        android:weightSum="3">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@drawable/stationary"
-        android:text="Stationary"
-        android:gravity="center|bottom"
-        android:textSize="25sp"
-        android:textColor="#eebc0f0f"
-        android:layout_margin="5dp"
-        android:textStyle="bold|italic"
-        />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/grocery"
+            android:gravity="center|bottom"
+            android:text="Grocery"
+            android:textColor="#eebc0f0f"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@drawable/electricals"
-        android:text="Electricals"
-        android:gravity="center|bottom"
-        android:textSize="25sp"
-        android:textColor="#eebc0f0f"
-        android:layout_margin="5dp"
-        android:textStyle="bold|italic"
-        />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/stationary"
+            android:gravity="center|bottom"
+            android:text="Stationary"
+            android:textColor="#eebc0f0f"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
 
-</LinearLayout>
-
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_weight="3.5"
-    android:weightSum="3"
-    android:orientation="horizontal"
-    >
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@drawable/medicines"
-        android:text="Medicines"
-        android:gravity="center|bottom"
-        android:textSize="25sp"
-        android:textColor="#eebc0f0f"
-        android:layout_margin="5dp"
-        android:textStyle="bold|italic"
-        />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@drawable/home_services"
-        android:text="Home Services"
-        android:gravity="center|bottom"
-        android:textSize="25sp"
-        android:textColor="#eebc0f0f"
-        android:layout_margin="5dp"
-        android:textStyle="bold|italic"
-        />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:elevation="0dp"
-        android:background="@drawable/smarthome"
-        android:text="Smart Home"
-        android:gravity="center|bottom"
-        android:textSize="25sp"
-        android:textColor="#eebc0f0f"
-        android:layout_margin="5dp"
-        android:textStyle="bold|italic"
-        />
-
-</LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/electricals"
+            android:gravity="center|bottom"
+            android:text="Electricals"
+            android:textColor="#eebc0f0f"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
 
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3.5"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/medicines"
+            android:gravity="center|bottom"
+            android:text="Medicines"
+            android:textColor="#eebc0f0f"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_services"
+            android:gravity="center|bottom"
+            android:text="Home Services"
+            android:textColor="#eebc0f0f"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/smarthome"
+            android:elevation="0dp"
+            android:gravity="center|bottom"
+            android:text="Smart Home"
+            android:textColor="#eebc0f0f"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+</LinearLayout>

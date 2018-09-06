@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    boolean flag = false;
     GridView androidGridView;
     Button place_order;
     LinearLayout place_order_linearlayout;
@@ -40,22 +41,51 @@ public class MainActivity extends AppCompatActivity {
         place_order.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
-                place_order_linearlayout.setVisibility(View.VISIBLE);
+                if (flag) {
+                    place_order_linearlayout.setVisibility(View.VISIBLE);
 
-                RelativeLayout.LayoutParams params0 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
-                        RelativeLayout.LayoutParams.WRAP_CONTENT);
 
-                RelativeLayout.LayoutParams params1 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
-                        RelativeLayout.LayoutParams.WRAP_CONTENT);
-                params1.addRule(RelativeLayout.BELOW, R.id.place_order);
+                    RelativeLayout.LayoutParams params0 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
+                            RelativeLayout.LayoutParams.WRAP_CONTENT);
+                    placeorder_relativeLayout.removeView(place_order);
+                    placeorder_relativeLayout.removeView(more_apps_button);
+                    placeorder_relativeLayout.removeView(place_order_linearlayout);
+                    placeorder_relativeLayout.addView(place_order, params0);
 
-                RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
-                        RelativeLayout.LayoutParams.WRAP_CONTENT);
-                params2.addRule(RelativeLayout.BELOW, R.id.place_order_linearlayout);
+                    RelativeLayout.LayoutParams params1 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
+                            RelativeLayout.LayoutParams.WRAP_CONTENT);
+                    params1.addRule(RelativeLayout.BELOW, R.id.place_order);
 
-                placeorder_relativeLayout.addView(place_order, params0);
-                placeorder_relativeLayout.addView(place_order_linearlayout, params1);
-                placeorder_relativeLayout.addView(more_apps_button, params2);
+                    placeorder_relativeLayout.addView(place_order_linearlayout, params1);
+                    place_order_linearlayout.setVisibility(View.VISIBLE);
+
+
+                    RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
+                            RelativeLayout.LayoutParams.WRAP_CONTENT);
+                    params2.addRule(RelativeLayout.BELOW, R.id.place_order_linearlayout);
+                    placeorder_relativeLayout.addView(more_apps_button, params2);
+                    flag = !flag;
+                }
+                else {
+                    place_order_linearlayout.setVisibility(View.INVISIBLE);
+
+
+                    RelativeLayout.LayoutParams params0 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
+                            RelativeLayout.LayoutParams.WRAP_CONTENT);
+                    placeorder_relativeLayout.removeView(place_order);
+                    placeorder_relativeLayout.removeView(more_apps_button);
+                    placeorder_relativeLayout.removeView(place_order_linearlayout);
+                    placeorder_relativeLayout.addView(place_order, params0);
+
+
+                    RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
+                            RelativeLayout.LayoutParams.WRAP_CONTENT);
+                    params2.addRule(RelativeLayout.BELOW, R.id.place_order);
+                    placeorder_relativeLayout.addView(more_apps_button, params2);
+                    flag = !flag;
+
+                }
+                //
 
 
 
