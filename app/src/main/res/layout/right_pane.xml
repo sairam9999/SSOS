@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="0dp"
     android:layout_height="match_parent"
     android:layout_weight="2"
@@ -17,85 +18,31 @@
             android:id="@+id/place_order"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/icon_cart"
-            android:text="Place Order"
             android:background="@drawable/button_bg"
-            />
+            android:drawableLeft="@drawable/icon_cart"
+            android:text="Place Order" />
 
 
         <Button
+            android:id="@+id/smart_apps_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/place_order"
+            android:background="@drawable/button_bg"
             android:drawableLeft="@drawable/icon_moreapps"
             android:text="Smart Apps"
-            android:visibility="visible"
-            android:id="@+id/more_apps_button"
-            android:background="@drawable/button_bg"
-            />
+            android:visibility="visible" />
 
         <GridLayout
+            android:id="@+id/smartapps_gridlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:id="@+id/smartapps_gridlayout"
-            >
+            android:visibility="invisible">
+
 
         </GridLayout>
 
-
-        <LinearLayout
-            android:id="@+id/place_order_linearlayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/place_order"
-            android:orientation="vertical"
-            android:visibility="invisible"
-            >
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Create New Order"
-                android:elevation="0dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:background="@drawable/button_bg"
-                />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Use Smart Order"
-                android:elevation="0dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:background="@drawable/button_bg"
-                />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Use Recent Order"
-                android:elevation="0dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:background="@drawable/button_bg"
-                />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Use Saved Order"
-                android:elevation="0dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:background="@drawable/button_bg"
-                />
-
-        </LinearLayout>
-
-
+        <include layout="@layout/layout_placeorder" />
 
     </RelativeLayout>
 

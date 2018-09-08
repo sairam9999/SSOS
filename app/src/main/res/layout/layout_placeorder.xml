@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+android:id="@+id/place_order_linearlayout"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_below="@+id/place_order"
+android:orientation="vertical"
+android:visibility="invisible">
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/button_bg"
+    android:elevation="0dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:text="Create New Order" />
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/button_bg"
+    android:elevation="0dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:text="Use Smart Order" />
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/button_bg"
+    android:elevation="0dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:text="Use Recent Order" />
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/button_bg"
+    android:elevation="0dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:text="Use Saved Order" />
+
+</LinearLayout>
