@@ -13,6 +13,7 @@ android:orientation="horizontal">
     android:layout_weight="0.25"
     android:drawableLeft="@drawable/ic_email"
     android:text="Email"
+    android:background="@drawable/button_bg"
     />
 
 <Button
@@ -22,6 +23,7 @@ android:orientation="horizontal">
     android:layout_weight="0.25"
     android:drawableLeft="@drawable/ic_chat"
     android:text="Messages"
+    android:background="@drawable/button_bg"
     />
 
 <Button
@@ -31,6 +33,7 @@ android:orientation="horizontal">
     android:layout_weight="0.25"
     android:drawableLeft="@drawable/ic_weather"
     android:text="Weather"
+    android:background="@drawable/button_bg"
     />
 
 <Button
@@ -40,6 +43,7 @@ android:orientation="horizontal">
     android:layout_weight="0.25"
     android:drawableLeft="@drawable/ic_movie"
     android:text="Video Calls"
+    android:background="@drawable/button_bg"
     />
 
 
