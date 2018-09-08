@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    boolean flag = false;
+    boolean flag = true;
     GridView androidGridView;
     Button place_order;
     LinearLayout place_order_linearlayout;

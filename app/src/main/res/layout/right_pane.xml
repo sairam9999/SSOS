@@ -18,7 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/icon_cart"
-            android:text="Place Order" />
+            android:text="Place Order"
+            />
 
 
         <Button
@@ -26,9 +27,22 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/place_order"
             android:drawableLeft="@drawable/icon_moreapps"
-            android:text="More Apps"
+            android:text="Smart Apps"
             android:visibility="visible"
             android:id="@+id/more_apps_button"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:id="@+id/smartapps_gridlayout">
+
+            <ImageButton />
+
+
+
+
+        </GridLayout>
 
 
         <LinearLayout
@@ -36,31 +50,47 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/place_order"
-
             android:orientation="vertical"
-            android:visibility="invisible">
+            android:visibility="invisible"
+            >
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Create New Order" />
+                android:text="Create New Order"
+                android:elevation="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/button_bg"
+                />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Use Smart Order" />
+                android:text="Use Smart Order"
+                android:elevation="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Use Recent Order" />
+                android:text="Use Recent Order"
+                android:elevation="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Use Saved Order" />
+                android:text="Use Saved Order"
+                android:elevation="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
 
         </LinearLayout>
+
+
 
     </RelativeLayout>
 
