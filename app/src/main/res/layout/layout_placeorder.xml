@@ -11,6 +11,7 @@ android:visibility="invisible">
 <Button
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/create_neworder"
     android:background="@drawable/button_bg"
     android:elevation="0dp"
     android:paddingLeft="10dp"

@@ -24,7 +24,7 @@
 
 
         <Button
-            android:id="@+id/smart_apps_button"
+            android:id="@+id/smart_apps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/place_order"
@@ -33,14 +33,7 @@
             android:text="Smart Apps"
             android:visibility="visible" />
 
-        <GridLayout
-            android:id="@+id/smartapps_gridlayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="invisible">
-
-
-        </GridLayout>
+        <include layout="@layout/layout_smartapps" />
 
         <include layout="@layout/layout_placeorder" />
 

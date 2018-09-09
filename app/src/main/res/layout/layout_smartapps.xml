@@ -1,0 +1,122 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/smartapps_gridlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/smart_apps"
+    android:visibility="invisible"
+    android:columnCount="3"
+    android:rowCount="4"
+    >
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:elevation="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_contacts" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:elevation="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_chat" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:elevation="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_call" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:elevation="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_video_call" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:elevation="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_email" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:elevation="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_calendar" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:elevation="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_icecream" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:elevation="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_taxi" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:elevation="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_flight" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:elevation="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_icecream" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:elevation="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_pizza" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_weight="1"
+        android:elevation="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_maps" />
+
+
+
+
+</GridLayout>

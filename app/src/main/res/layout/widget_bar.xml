@@ -41,7 +41,7 @@ android:orientation="horizontal">
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="0.25"
-    android:drawableLeft="@drawable/ic_movie"
+    android:drawableLeft="@drawable/ic_video_call"
     android:text="Video Calls"
     android:background="@drawable/button_bg"
     />
