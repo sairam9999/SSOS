@@ -16,17 +16,21 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.example.svankayalapati.ssos.listeners.NewOrderListener;
+import com.example.svankayalapati.ssos.listeners.PlaceOrderListener;
+import com.example.svankayalapati.ssos.listeners.SmartAppsListener;
+
 public class MainActivity extends AppCompatActivity {
 
-    boolean flag = true;
-    boolean flag_smartapps = true;
-    GridView androidGridView;
-    Button place_order;
-    Button create_neworder;
-    LinearLayout place_order_linearlayout;
-    RelativeLayout placeorder_relativeLayout;
-    Button smart_apps;
-    GridLayout smartapps_gridlayout;
+    public boolean flag = true;
+    public boolean flag_smartapps = true;
+    public GridView androidGridView;
+    public Button place_order;
+    public Button create_neworder;
+    public LinearLayout place_order_linearlayout;
+    public RelativeLayout placeorder_relativeLayout;
+    public Button smart_apps;
+    public GridLayout smartapps_gridlayout;
     Integer[] imageIDs = {
             R.drawable.grocery, R.drawable.stationary, R.drawable.electricals,
             R.drawable.medicines, R.drawable.home_services, R.drawable.smarthome,
@@ -44,99 +48,14 @@ public class MainActivity extends AppCompatActivity {
         smartapps_gridlayout = (GridLayout) findViewById(R.id.smartapps_gridlayout);
         create_neworder = (Button) findViewById(R.id.create_neworder);
 
-        create_neworder.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Place an Order",Toast.LENGTH_LONG).show();
-            }
-        });
+        NewOrderListener newOrderListener = new NewOrderListener(getApplicationContext(), create_neworder);
+        PlaceOrderListener placeOrderListener = new PlaceOrderListener(this);
+        SmartAppsListener smartAppsListener = new SmartAppsListener(this);
 
-        place_order.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Code here executes on main thread after user presses button
-                if (flag) {
-                    if (flag_smartapps == false) {
-                        smartapps_gridlayout.setVisibility(View.INVISIBLE);
-                        flag_smartapps = !flag_smartapps;
-                    }
-                    place_order_linearlayout.setVisibility(View.VISIBLE);
+        create_neworder.setOnClickListener(newOrderListener);
+        place_order.setOnClickListener(placeOrderListener);
+        smart_apps.setOnClickListener(smartAppsListener);
 
-
-                    RelativeLayout.LayoutParams params0 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
-                            RelativeLayout.LayoutParams.WRAP_CONTENT);
-                    placeorder_relativeLayout.removeView(place_order);
-                    placeorder_relativeLayout.removeView(smart_apps);
-                    placeorder_relativeLayout.removeView(place_order_linearlayout);
-                    placeorder_relativeLayout.addView(place_order, params0);
-
-                    RelativeLayout.LayoutParams params1 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
-                            RelativeLayout.LayoutParams.WRAP_CONTENT);
-                    params1.addRule(RelativeLayout.BELOW, R.id.place_order);
-
-                    placeorder_relativeLayout.addView(place_order_linearlayout, params1);
-                    place_order_linearlayout.setVisibility(View.VISIBLE);
-
-
-                    RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
-                            RelativeLayout.LayoutParams.WRAP_CONTENT);
-                    params2.addRule(RelativeLayout.BELOW, R.id.place_order_linearlayout);
-                    placeorder_relativeLayout.addView(smart_apps, params2);
-                    flag = !flag;
-                } else {
-                    place_order_linearlayout.setVisibility(View.INVISIBLE);
-
-
-                    RelativeLayout.LayoutParams params0 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
-                            RelativeLayout.LayoutParams.WRAP_CONTENT);
-                    placeorder_relativeLayout.removeView(place_order);
-                    placeorder_relativeLayout.removeView(smart_apps);
-                    placeorder_relativeLayout.removeView(place_order_linearlayout);
-                    placeorder_relativeLayout.addView(place_order, params0);
-
-
-                    RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
-                            RelativeLayout.LayoutParams.WRAP_CONTENT);
-                    params2.addRule(RelativeLayout.BELOW, R.id.place_order);
-                    placeorder_relativeLayout.addView(smart_apps, params2);
-                    flag = !flag;
-
-                }
-            }
-        });
-
-
-        //OnClick Listener for Smart Apps Button
-
-        smart_apps.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                if (flag_smartapps) {
-                    if (flag == false) {
-                        place_order_linearlayout.setVisibility(View.INVISIBLE);
-
-
-                        RelativeLayout.LayoutParams params0 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
-                                RelativeLayout.LayoutParams.WRAP_CONTENT);
-                        placeorder_relativeLayout.removeView(place_order);
-                        placeorder_relativeLayout.removeView(smart_apps);
-                        placeorder_relativeLayout.removeView(place_order_linearlayout);
-                        placeorder_relativeLayout.addView(place_order, params0);
-
-
-                        RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
-                                RelativeLayout.LayoutParams.WRAP_CONTENT);
-                        params2.addRule(RelativeLayout.BELOW, R.id.place_order);
-                        placeorder_relativeLayout.addView(smart_apps, params2);
-                        flag = !flag;
-                    }
-                    smartapps_gridlayout.setVisibility(View.VISIBLE);
-                    flag_smartapps = !flag_smartapps;
-                } else {
-                    smartapps_gridlayout.setVisibility(View.INVISIBLE);
-                    flag_smartapps = !flag_smartapps;
-                }
-
-            }
-        });
     }
 
 }
