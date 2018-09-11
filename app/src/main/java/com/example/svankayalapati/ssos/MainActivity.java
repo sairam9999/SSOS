@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         smartapps_gridlayout = (GridLayout) findViewById(R.id.smartapps_gridlayout);
         create_neworder = (Button) findViewById(R.id.create_neworder);
 
-        NewOrderListener newOrderListener = new NewOrderListener(getApplicationContext(), create_neworder);
+        NewOrderListener newOrderListener = new NewOrderListener(getApplicationContext(), this);
         PlaceOrderListener placeOrderListener = new PlaceOrderListener(this);
         SmartAppsListener smartAppsListener = new SmartAppsListener(this);
 
