@@ -1,52 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="10"
-    android:id="@+id/layout_placeorder"
-    android:layout_gravity="top"
-    >
-
-    <Button
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="B1"
-        />
+    android:weightSum="10">
 
     <!--<Button-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_weight="1"-->
-        <!--android:text="B2"/>-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="B1"-->
+    <!--android:id="@+id/B1"-->
+    <!--/>-->
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="#eef45f5f"
         android:orientation="horizontal"
-        android:layout_weight="9"
-        >
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="B2"/>
+        android:layout_weight="0.75"
+        android:weightSum="2">
 
         <Button
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="7"
-            android:text="B3"/>
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:text="Categories" />
 
-        <Button
+        <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1.79"-->
+        <!--android:text="Search Bar goes here" />-->
+
+        <android.support.v7.widget.SearchView
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="B4"/>
+            android:layout_height="wrap_content"
+            android:layout_weight="1.80"
+            android:background="#fcfcff">
+
+
+        </android.support.v7.widget.SearchView>
+
 
     </LinearLayout>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_weight="9.25">
+
+        <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="B2"-->
+        <!--android:id="@+id/B2"-->
+        <!--/>-->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.50"
+            android:background="#eeaf4ec5"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Groceries" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stationary" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Electricals" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medicines" />
+
+        </LinearLayout>
+
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="7.5"-->
+            <!--android:text="Main Area" />-->
+
+        <ListView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/place_order_listview"
+            android:layout_weight="6.50"
+            >
+
+
+        </ListView>
+
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="Right Pane" />
+
+    </LinearLayout>
 
 </LinearLayout>
