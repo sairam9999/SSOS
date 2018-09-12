@@ -20,11 +20,9 @@ public class PlaceOrder extends AppCompatActivity {
         setContentView(R.layout.activity_place_order);
 
         final ListView listview = (ListView) findViewById(R.id.place_order_listview);
-        String[] values = new String[]{"Android", "iPhone", "WindowsMobile",
-                "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-                "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
-                "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
-                "Android", "iPhone", "WindowsMobile"};
+        String[] values = new String[]{"Butter", "Cane Sugar", "Cheese", "Eggs", "Milk",
+                "Nescafe", "Oil", "Pasta", "Rice", "Salt", "Sugar", "Wheat Bread",
+                  };
 
         final ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < values.length; ++i) {
