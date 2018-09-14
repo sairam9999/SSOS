@@ -8,7 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import com.example.svankayalapati.ssos.db.Item;
 import com.example.svankayalapati.ssos.db.ItemDetails;
 
 import java.util.ArrayList;
@@ -19,6 +21,8 @@ public class PlaceOrder extends AppCompatActivity {
 ItemDetails itemDetails = new ItemDetails();
 
 Button rightpane_button;
+TextView itemDescription_textview;
+Button button_itemImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +30,13 @@ Button rightpane_button;
         setContentView(R.layout.activity_place_order);
         itemDetails.init();
 
-        rightpane_button = (Button) findViewById(R.id.rightpane_button);
+        itemDescription_textview = (TextView) findViewById(R.id.itemsDescription_textview);
+        button_itemImage = (Button) findViewById(R.id.button_itemImage);
 
         final ListView listview = (ListView) findViewById(R.id.place_order_listview);
         String[] values = new String[]{"Butter", "Cane Sugar", "Cheese", "Eggs", "Milk",
                 "Nescafe", "Oil", "Pasta", "Rice", "Salt", "Sugar", "Wheat Bread",
-                  };
+        };
 
         final ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < values.length; ++i) {
@@ -48,15 +53,18 @@ Button rightpane_button;
                                     int position, long id) {
                 final String item = (String) parent.getItemAtPosition(position);
 
+                Item var = itemDetails.getItemMap().get(item);
+                StringBuilder stringBuilder = new StringBuilder();
 
-               String var = itemDetails.getItemMap().get(item);
-                rightpane_button.setText(var);
-               }
+                stringBuilder.append("Brand: ").append(var.getBrand()).append("\n\r").
+                        append("Price:").append(var.getPrice()).append("\n\r").
+                        append("Weight:").append(var.getWeight()).append("\r\n").
+                        append("Container").append(var.getContainerType()).append("\r\n").
+                        append("Description").append(var.getDescription());
 
+                itemDescription_textview.setText(stringBuilder.toString());
+            }
         });
-
-
-
     }
 
     class StableArrayAdapter extends ArrayAdapter<String> {
