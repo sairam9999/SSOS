@@ -17,9 +17,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="0.75"
         android:background="#eef45f5f"
         android:orientation="horizontal"
-        android:layout_weight="0.75"
         android:weightSum="2">
 
         <Button
@@ -50,9 +50,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="9.25"
         android:orientation="horizontal"
-        android:weightSum="10"
-        android:layout_weight="9.25">
+        android:weightSum="10">
 
         <!--<Button-->
         <!--android:layout_width="wrap_content"-->
@@ -92,29 +92,55 @@
         </LinearLayout>
 
         <!--<Button-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_weight="7.5"-->
-            <!--android:text="Main Area" />-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="7.5"-->
+        <!--android:text="Main Area" />-->
 
         <ListView
+            android:id="@+id/place_order_listview"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/place_order_listview"
-            android:layout_weight="6.50"
-            >
+            android:layout_weight="6.50">
 
 
         </ListView>
 
+        <!--<Button-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="2"-->
+        <!--android:text="Right Pane"-->
+        <!--android:id="@+id/rightpane_button"/>-->
 
 
-        <Button
+        <LinearLayout
+            android:id="@+id/itemsDescription_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="Right Pane"
-            android:id="@+id/rightpane_button"/>
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/itemsDescription_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:textStyle="bold"
+
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="B1"
+                android:id="@+id/button_itemImage"
+                />
+
+
+        </LinearLayout>
 
     </LinearLayout>
 
