@@ -8,12 +8,23 @@ public class Item {
     ContainerType containerType;
     String description;
 
-    public Item(String brand, float price, String weight, ContainerType containerType, String description) {
+    public int getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(int imageId) {
+        this.imageId = imageId;
+    }
+
+    int imageId;
+
+    public Item(String brand, float price, String weight, ContainerType containerType, String description, int imageId) {
         this.brand = brand;
         this.price = price;
         this.weight = weight;
         this.containerType = containerType;
         this.description = description;
+        this.imageId = imageId;
     }
 
     public String getBrand() {
