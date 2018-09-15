@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -23,16 +24,24 @@ ItemDetails itemDetails = new ItemDetails();
 Button rightpane_button;
 TextView itemDescription_textview;
 Button button_itemImage;
+public static int imageId_butter;
+    public static int imageId_cane_sugar;
+    public static int imageId_cheese;
+    public static int imageId_eggs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_order);
-        itemDetails.init();
+
 
         itemDescription_textview = (TextView) findViewById(R.id.itemsDescription_textview);
         button_itemImage = (Button) findViewById(R.id.button_itemImage);
-
+        imageId_butter = R.drawable.butter;
+        imageId_cane_sugar = R.drawable.cane_sugar;
+        imageId_cheese = R.drawable.cheese;
+        imageId_eggs = R.drawable.icons_eggs;
+        itemDetails.init();
         final ListView listview = (ListView) findViewById(R.id.place_order_listview);
         String[] values = new String[]{"Butter", "Cane Sugar", "Cheese", "Eggs", "Milk",
                 "Nescafe", "Oil", "Pasta", "Rice", "Salt", "Sugar", "Wheat Bread",
@@ -63,6 +72,7 @@ Button button_itemImage;
                         append("Description").append(var.getDescription());
 
                 itemDescription_textview.setText(stringBuilder.toString());
+                button_itemImage.setBackgroundResource(var.getImageId());
             }
         });
     }
