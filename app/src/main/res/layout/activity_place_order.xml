@@ -7,37 +7,37 @@
     android:orientation="vertical"
     android:weightSum="10">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.75"
-        android:background="#eef45f5f"
-        android:orientation="horizontal"
-        android:weightSum="2">
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="0.75"-->
+    <!--android:background="#eef45f5f"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:weightSum="2">-->
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.20"
-            android:text="Categories" />
+    <!--<Button-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="0.20"-->
+    <!--android:text="Categories" />-->
 
-        <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_weight="1.79"-->
-        <!--android:text="Search Bar goes here" />-->
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_weight="1.79"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="Search Bar goes here" />&ndash;&gt;-->
 
-        <android.support.v7.widget.SearchView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.80"
-            android:background="#fcfcff">
-
-
-        </android.support.v7.widget.SearchView>
+    <!--<android.support.v7.widget.SearchView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1.80"-->
+    <!--android:background="#fcfcff">-->
 
 
-    </LinearLayout>
+    <!--</android.support.v7.widget.SearchView>-->
+    <include layout="@layout/search_bar" />
+
+    <!--</LinearLayout>-->
 
 
     <LinearLayout
@@ -59,7 +59,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.50"
-            android:background="#eeaf4ec5"
             android:orientation="vertical">
 
             <Button
@@ -94,24 +93,19 @@
             android:id="@+id/place_order_listview"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="6.50">
+            android:layout_weight="6.50"
+            android:background="@drawable/border_style">
 
 
         </ListView>
-
-        <!--<Button-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_weight="2"-->
-        <!--android:text="Right Pane"-->
-        <!--android:id="@+id/rightpane_button"/>-->
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:orientation="vertical"
-            android:weightSum="9">
+            android:weightSum="9"
+            android:background="@drawable/custom_border">
 
             <LinearLayout
                 android:id="@+id/itemsDescription_layout"
@@ -137,8 +131,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
-                    android:elevation="0dp"
-                    android:background="#00faf9f9"/>
+                    android:background="#00faf9f9"
+                    android:elevation="0dp" />
 
 
             </LinearLayout>
@@ -146,8 +140,8 @@
             <TextView
                 android:id="@+id/textview_itemdescription1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-                <!--android:background="@drawable/border_style"/>-->
+                android:layout_height="wrap_content" />
+            <!--android:background="@drawable/border_style"/>-->
 
             <TextView
                 android:layout_width="match_parent"
@@ -156,9 +150,9 @@
             <TextView
                 android:id="@+id/textview_itemdescription2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-                <!--android:background="@drawable/border_style"-->
-                />
+                android:layout_height="wrap_content" />
+            <!--android:background="@drawable/border_style"-->
+            />
         </LinearLayout>
 
 
