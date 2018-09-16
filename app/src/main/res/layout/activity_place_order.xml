@@ -7,38 +7,7 @@
     android:orientation="vertical"
     android:weightSum="10">
 
-    <!--<LinearLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="0dp"-->
-    <!--android:layout_weight="0.75"-->
-    <!--android:background="#eef45f5f"-->
-    <!--android:orientation="horizontal"-->
-    <!--android:weightSum="2">-->
-
-    <!--<Button-->
-    <!--android:layout_width="0dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_weight="0.20"-->
-    <!--android:text="Categories" />-->
-
-    <!--&lt;!&ndash;<Button&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_weight="1.79"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:text="Search Bar goes here" />&ndash;&gt;-->
-
-    <!--<android.support.v7.widget.SearchView-->
-    <!--android:layout_width="0dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_weight="1.80"-->
-    <!--android:background="#fcfcff">-->
-
-
-    <!--</android.support.v7.widget.SearchView>-->
     <include layout="@layout/search_bar" />
-
-    <!--</LinearLayout>-->
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,14 +15,6 @@
         android:layout_weight="9.25"
         android:orientation="horizontal"
         android:weightSum="10">
-
-        <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_weight="1"-->
-        <!--android:text="B2"-->
-        <!--android:id="@+id/B2"-->
-        <!--/>-->
 
         <LinearLayout
             android:layout_width="0dp"
@@ -82,12 +43,6 @@
                 android:text="Medicines" />
 
         </LinearLayout>
-
-        <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_weight="7.5"-->
-        <!--android:text="Main Area" />-->
 
         <ListView
             android:id="@+id/place_order_listview"
@@ -151,10 +106,8 @@
                 android:id="@+id/textview_itemdescription2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-            <!--android:background="@drawable/border_style"-->
-            />
-        </LinearLayout>
 
+        </LinearLayout>
 
     </LinearLayout>
 
