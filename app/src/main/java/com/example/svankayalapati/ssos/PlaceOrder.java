@@ -24,6 +24,9 @@ ItemDetails itemDetails = new ItemDetails();
 Button rightpane_button;
 TextView itemDescription_textview;
 Button button_itemImage;
+TextView textview_itemdescription1;
+TextView textview_itemdescription2;
+
 public static int imageId_butter;
     public static int imageId_cane_sugar;
     public static int imageId_cheese;
@@ -41,6 +44,9 @@ public static int imageId_butter;
         imageId_cane_sugar = R.drawable.cane_sugar;
         imageId_cheese = R.drawable.cheese;
         imageId_eggs = R.drawable.icons_eggs;
+        textview_itemdescription1 = (TextView) findViewById(R.id.textview_itemdescription1);
+        textview_itemdescription2 = (TextView) findViewById(R.id.textview_itemdescription2);
+
         itemDetails.init();
         final ListView listview = (ListView) findViewById(R.id.place_order_listview);
         String[] values = new String[]{"Butter", "Cane Sugar", "Cheese", "Eggs", "Milk",
@@ -73,6 +79,11 @@ public static int imageId_butter;
 
                 itemDescription_textview.setText(stringBuilder.toString());
                 button_itemImage.setBackgroundResource(var.getImageId());
+                textview_itemdescription1.setText(var.getDescription1());
+                textview_itemdescription2.setText(var.getDescription2());
+                textview_itemdescription1.setBackgroundResource(R.drawable.border_style);
+                textview_itemdescription2.setBackgroundResource(R.drawable.border_style);
+
             }
         });
     }
