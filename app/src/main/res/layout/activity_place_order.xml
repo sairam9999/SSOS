@@ -7,13 +7,6 @@
     android:orientation="vertical"
     android:weightSum="10">
 
-    <!--<Button-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="B1"-->
-    <!--android:id="@+id/B1"-->
-    <!--/>-->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -113,37 +106,60 @@
         <!--android:text="Right Pane"-->
         <!--android:id="@+id/rightpane_button"/>-->
 
-
         <LinearLayout
-            android:id="@+id/itemsDescription_layout"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="2"
-            android:orientation="horizontal"
-            android:weightSum="10">
+            android:orientation="vertical"
+            android:weightSum="9">
+
+            <LinearLayout
+                android:id="@+id/itemsDescription_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/itemsDescription_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:fontFamily="sans-serif"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+
+                    />
+
+                <Button
+                    android:id="@+id/button_itemImage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:elevation="0dp"
+                    android:background="#00faf9f9"/>
+
+
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/itemsDescription_textview"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="6"
-                android:textStyle="bold"
-                android:textSize="20dp"
-                android:fontFamily="sans-serif"
+                android:id="@+id/textview_itemdescription1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+                <!--android:background="@drawable/border_style"/>-->
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="3dp" />
+
+            <TextView
+                android:id="@+id/textview_itemdescription2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+                <!--android:background="@drawable/border_style"-->
                 />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:text="B1"
-                android:id="@+id/button_itemImage"
-                />
-
-
         </LinearLayout>
-
 
 
     </LinearLayout>
