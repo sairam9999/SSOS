@@ -49,8 +49,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="6.50"
-            android:background="@drawable/border_style">
+            android:background="@drawable/border_style"
 
+            >
 
         </ListView>
 
@@ -58,9 +59,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
+            android:background="@drawable/custom_border"
             android:orientation="vertical"
-            android:weightSum="9"
-            android:background="@drawable/custom_border">
+            android:weightSum="9">
 
             <LinearLayout
                 android:id="@+id/itemsDescription_layout"
