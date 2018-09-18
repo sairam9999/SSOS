@@ -12,8 +12,6 @@ public class PlaceOrderListener implements View.OnClickListener {
 
     public PlaceOrderListener(MainActivity activity) {
         this.activity = activity;
-
-
     }
 
     @Override
