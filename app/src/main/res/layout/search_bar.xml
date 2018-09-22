@@ -25,7 +25,8 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="0.10"
-        android:background="@drawable/icon_cart" />
+        android:background="@drawable/icon_cart"
+        android:id="@+id/cart_button"/>
 
 
 </LinearLayout>
