@@ -24,7 +24,11 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAC4ptdkIkJVuNbJRShvqL17hEK319rD8g" />
 
-        <activity android:name=".PlaceOrder"></activity>
+        <activity android:name=".PlaceOrder" />
+        <activity
+            android:name=".CheckoutActivity"
+            android:label="@string/title_activity_checkout"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
