@@ -15,9 +15,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.svankayalapati.ssos.adapter.ItemRowAdapter;
 import com.example.svankayalapati.ssos.db.Item;
 import com.example.svankayalapati.ssos.db.ItemDetails;
+import com.example.svankayalapati.ssos.listeners.CheckOutListener;
 import com.google.android.gms.common.util.Strings;
 
 import java.util.ArrayList;
@@ -33,6 +33,10 @@ Button button_itemImage;
 TextView textview_itemdescription1;
 TextView textview_itemdescription2;
 Context applicationContext;
+Button cart_button;
+
+public ArrayList<String> checkout_arrayList = new ArrayList<>();
+
 
 public static int imageId_butter;
     public static int imageId_cane_sugar;
@@ -43,7 +47,7 @@ public static int imageId_butter;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_order);
-applicationContext = this;
+        applicationContext = this;
 
         itemDescription_textview = (TextView) findViewById(R.id.itemsDescription_textview);
         button_itemImage = (Button) findViewById(R.id.button_itemImage);
@@ -53,6 +57,7 @@ applicationContext = this;
         imageId_eggs = R.drawable.icons_eggs;
         textview_itemdescription1 = (TextView) findViewById(R.id.textview_itemdescription1);
         textview_itemdescription2 = (TextView) findViewById(R.id.textview_itemdescription2);
+        cart_button = (Button) findViewById(R.id.cart_button);
 
         itemDetails.init();
 
@@ -113,48 +118,37 @@ applicationContext = this;
 
             }
         });
+        listview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+            public boolean onItemLongClick(AdapterView<?> arg0, View v,
+                                           int index, long arg3) {
+                // TODO Auto-generated method stub
+
+                String str=listview.getItemAtPosition(index).toString();
+                Toast.makeText(applicationContext, "Added to Cart: " +str, Toast.LENGTH_LONG).show();
+                checkout_arrayList.add(str);
+                // Log.d("long click : " +str);
+                return true;
+            }
+        });
+
+        //On CLick Listener for Cart Button
+
+        cart_button.setOnClickListener(new CheckOutListener(this));
     }
 
     class StableArrayAdapter extends ArrayAdapter<String> {
 
         HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
-        private Activity mContext;
-        private List<String> mArrSchoolData;
-        public StableArrayAdapter(Activity context, int textViewResourceId,
+
+        public StableArrayAdapter(Context context, int textViewResourceId,
                                   List<String> objects) {
             super(context, textViewResourceId, objects);
-            mContext = context;
-            mArrSchoolData = objects;
             for (int i = 0; i < objects.size(); ++i) {
                 mIdMap.put(objects.get(i), i);
             }
         }
-        public View getView(int position, View view, ViewGroup parent){
-           // LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            LayoutInflater inflater = mContext.getLayoutInflater();
-            view = inflater.inflate(R.layout.layout_itemrow, null, true);
 
-
-            // get the reference of textView and button
-            TextView txtSchoolTitle = (TextView) view.findViewById(R.id.txtSchoolTitle);
-            Button btnAction = (Button) view.findViewById(R.id.btnAction);
-
-            // Set the title and button name
-            txtSchoolTitle.setText(mArrSchoolData.get(position));
-            btnAction.setBackgroundResource(R.drawable.icon_list_cart);
-
-            // Click listener of button
-//            btnAction.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    // Logic goes here
-//
-//                    Toast.makeText(applicationContext, "Place an Order" +view.getId(), Toast.LENGTH_LONG).show();
-//                }
-//            });
-
-            return view;
-                 }
         @Override
         public long getItemId(int position) {
             String item = getItem(position);
@@ -167,4 +161,5 @@ applicationContext = this;
         }
 
     }
+
 }
